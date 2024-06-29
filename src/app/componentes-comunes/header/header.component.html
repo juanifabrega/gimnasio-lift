@@ -1,0 +1,25 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-3">
+                <div class="logo-container">
+                    <img src="../../../assets/logoOriginal3.png" alt="" class="logo">
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9 col-9 text-end">
+                <div class="menu-icon" (click)="openMenu()">
+                    <i class="{{menu_icon}}"></i>
+                </div>
+                <div class="desktop-menu" [class.mobile-menu]="menuValue">
+                    <ul>
+                        <li routerLink="/home" (click)="closeMenu()">Inicio</li>
+                        <li (click)="closeMenu()">Nosotros</li>
+                        <li (click)="closeMenu()">Staff</li>
+                        <li (click)="closeMenu()">Entrenamientos</li>
+                        <li routerLink="/contacto" (click)="closeMenu()">Contacto</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
